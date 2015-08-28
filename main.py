@@ -41,11 +41,11 @@ def convert_bits(size, units):
         return 0.0
 
 def download_time(file_size, file_units, bandwidth, bandwidth_units):
-        file_size = convert_bits(file_size, file_units)
-        bandwidth = convert_bits(bandwidth, bandwidth_units)
+    file_size = convert_bits(file_size, file_units)
+    bandwidth = convert_bits(bandwidth, bandwidth_units)
     
-        time_taken = file_size / bandwidth
-        return convert_seconds(time_taken)
+    time_taken = file_size / bandwidth
+    return convert_seconds(time_taken)
 
 def main():
     parser = argparse.ArgumentParser(description = "Estimator-Download-time")
